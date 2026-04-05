@@ -1,6 +1,6 @@
 "use client"
 
-import { Search, SunMoon } from "lucide-react"
+import { Search, Sun, Moon } from "lucide-react"
 import useSearch from "@/hooks/useSearch"
 
 import { useTheme } from "next-themes"
@@ -30,11 +30,8 @@ export default function Header({
       </span>
       <span className="flex items-center">
         <div>
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="cursor-pointer"
-          >
-            <SunMoon className="h-3 w-3" />
+          <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="cursor-pointer">
+            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </button>
         </div>
         <div className="relative flex items-center">
