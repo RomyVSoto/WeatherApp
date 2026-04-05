@@ -87,15 +87,15 @@ export default function Home() {
           }}
         />
       </div>
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 py-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-8 sm:px-6 sm:gap-10">
         <section
-          className="h-90 w-full rounded-xl bg-cover bg-center"
+          className="w-full rounded-xl bg-cover bg-center sm:h-90"
           style={{ backgroundImage: `url(${hero.src})` }}
         >
           <div className="flex h-full flex-col justify-between">
-            <div className="flex flex-1 items-center justify-between px-20">
+            <div className="flex flex-1 flex-col gap-6 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-20 sm:py-0">
               <div className="flex flex-col">
-                <span className="font-sans text-3xl font-medium">
+                <span className="font-sans text-2xl font-medium sm:text-3xl">
                   {weatherData?.location.name}, {weatherData?.location.country}
                 </span>
                 <span className="flex items-center gap-2 font-sans text-lg font-light text-[#4A4BD7] dark:text-[#4CD7F6]">
@@ -109,7 +109,7 @@ export default function Home() {
                 </span>
               </div>
               <div className="flex flex-col">
-                <span className="font-sans text-8xl font-thin text-[#4A4BD7] dark:text-[#4CD7F6]">
+                <span className="font-sans text-6xl font-thin text-[#4A4BD7] sm:text-8xl dark:text-[#4CD7F6]">
                   {weatherData?.current.temp_c}°C
                 </span>
                 <span className="text-md flex items-center justify-end gap-1 font-sans font-light text-[#596064] dark:text-[#94A3B8]">
@@ -118,7 +118,7 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div className="flex items-center justify-between bg-[#F7F9FB]/20 px-20 py-5 dark:bg-[#1E293B]/20">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-4 bg-[#F7F9FB]/20 px-6 py-5 sm:flex sm:items-center sm:justify-between sm:px-20 dark:bg-[#1E293B]/20">
               <span className="flex flex-col gap-1">
                 <p className="font-sans text-xs font-light tracking-wider text-[#596064] dark:text-[#94A3B8]">
                   HUMIDITY
@@ -156,9 +156,9 @@ export default function Home() {
         </section>
         <section className="flex flex-col gap-6">
           <div className="font-base font-sans text-sm tracking-widest text-[#596064] dark:text-[#94A3B8]">
-            7-DAY FORECAST
+            5-DAY FORECAST
           </div>
-          <div className="flex justify-between gap-4">
+          <div className="grid grid-cols-3 gap-3 sm:flex sm:justify-between sm:gap-4">
             {weatherData?.forecast.forecastday.map((day) => (
               <div
                 key={day.date}
@@ -184,7 +184,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="flex justify-between gap-4">
+        <section className="flex flex-col gap-4 sm:flex-row sm:justify-between">
           <div className="flex w-full flex-col gap-3 rounded-lg bg-white p-4 dark:bg-[#1E293B]">
             <span className="flex items-center gap-2 font-sans text-sm font-medium tracking-widest text-[#596064] dark:text-[#94A3B8]">
               <Sun className="h-5 w-5 text-[#4A4BD7] dark:text-[#4CD7F6]" />
