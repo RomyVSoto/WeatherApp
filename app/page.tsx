@@ -12,7 +12,7 @@ import Header from "@/components/Header"
 
 export default function Home() {
   const [city, setCity] = useState("Santo Domingo")
-  const [search, setSearch] = useState("Santo Domingo")
+  const [search, setSearch] = useState("")
 
   const { weatherData, isLoading, error } = useWeather(city)
 
