@@ -34,7 +34,7 @@ export default function Header({
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="cursor-pointer"
           >
-            <SunMoon className="h-4 w-4" />
+            <SunMoon className="h-3 w-3" />
           </button>
         </div>
         <div className="relative flex items-center">
