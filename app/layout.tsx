@@ -2,6 +2,8 @@ import { Geist, Geist_Mono, Outfit, DM_Sans } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import Providers from "@/components/Providers"
+import Header from "@/components/Header";
 import { cn } from "@/lib/utils";
 
 const dmSansHeading = DM_Sans({subsets:['latin'],variable:'--font-heading'});
@@ -25,7 +27,12 @@ export default function RootLayout({
       className={cn("antialiased", fontMono.variable, "font-sans", outfit.variable, dmSansHeading.variable)}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Providers>
+            <Header />
+            {children}
+          </Providers>
+        </ThemeProvider>
       </body>
     </html>
   )
