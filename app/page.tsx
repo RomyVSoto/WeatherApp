@@ -82,6 +82,9 @@ export default function Home() {
           search={search}
           setSearch={setSearch}
           handleSearch={handleSearch}
+          onSelectCity={(cityName) => {
+            setCity(cityName)
+          }}
         />
       </div>
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 py-8">
