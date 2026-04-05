@@ -15,6 +15,8 @@ export interface WeatherResponse {
       text: string;
       icon: string;
     };
+    precip_mm: number;
+    pressure_mb: number;
   };
   forecast: {
     forecastday: ForecastDay[];

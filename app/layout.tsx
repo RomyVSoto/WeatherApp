@@ -3,7 +3,6 @@ import { Geist, Geist_Mono, Outfit, DM_Sans } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Providers from "@/components/Providers"
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 
@@ -31,7 +30,6 @@ export default function RootLayout({
         <ThemeProvider>
           <Providers>
             <div className="flex min-h-screen flex-col">
-              <Header />
               <main className="flex-1">{children}</main>
               <Footer />
             </div>
